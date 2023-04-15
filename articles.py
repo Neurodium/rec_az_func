@@ -1,10 +1,9 @@
 import requests
 import os
 
-api_url = os.envion["myapi"]
+api_url = os.environ["myapi"]
 
 def get_rec_articles(user_id):
-    print(api_url)
     raw_data = requests.get(url=api_url+str(user_id)).json()
     results = [(article_id, rating) for article_id, rating in raw_data['pred'].items()]
     results.sort(key=lambda a: a[1])
