@@ -6,7 +6,6 @@ from articles import get_rec_articles
 
 import json
 
-nb_results = 5
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
