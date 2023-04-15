@@ -1,7 +1,7 @@
 import requests
 import os
 
-api_url = os.environ["myapi"]
+api_url = "https://rec-articles.herokuapp.com/api/"
 
 def get_rec_articles(user_id):
     raw_data = requests.get(url=api_url+str(user_id)).json()
