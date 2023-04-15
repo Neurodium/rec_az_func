@@ -1,7 +1,7 @@
 import requests
 import os
 
-api_url = os.environ["API_URL"]
+api_url = os.environ["myapi"]
 
 def get_rec_articles(user_id):
     raw_data = requests.get(url=api_url+str(user_id)).json()
